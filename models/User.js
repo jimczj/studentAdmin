@@ -38,6 +38,7 @@ UserSchema.statics = {
   // 根据req传来到内容，进行 add user,并设置初始角色
   createFromReq: function(req, cb) {
     let jsonObj = getJsonFromReq(UserSchema, req);
+    jsonObj.password = sha1(jsonObj.password);
     Role.findOne({
       role_name: '班级成员'
     }, function(err, role) {
@@ -69,11 +70,6 @@ UserSchema.statics = {
   },
 
 };
-// 保存前對密碼進行加密,如果是刚创建的用户，权限初始化为班级成员
-UserSchema.pre('save', function(next) {
-  this.password = sha1(this.password);
-  next();
-});
 
 var User = mongoose.model('User', UserSchema);
 module.exports = User;
