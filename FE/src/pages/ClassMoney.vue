@@ -2,7 +2,7 @@
   <main>
     <!-- Form -->
     <el-row class="list-title">
-      <el-col :span="6" class="text_left"><i class="el-icon-menu"></i> &nbsp&nbsp班会贴</el-col>
+      <el-col :span="6" class="text_left"><i class="el-icon-menu"></i> &nbsp&nbsp班费贴</el-col>
       <el-col :span="6" :offset="12" class="text_right"> <el-button type="text" @click.native="dialogFormVisible = true"><i class="el-icon-plus"></i></el-button></el-col>
     </el-row> 
     <el-dialog title="新增" v-model="dialogFormVisible">
