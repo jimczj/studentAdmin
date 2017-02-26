@@ -9,8 +9,8 @@
 
 # 配置
 在 config.js里面，配置你的mongodb 
-
-
+# 运行实例
+http://www.szudatalab.com:3030
 # 运行
     
     git clone https://github.com/jimczj/studentAdmin.git  // 仓库
